@@ -1,0 +1,729 @@
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+/*----------------------------------------------------*/
+
+body{
+    background-color:#fff;
+    font-family: 'Roboto Condensed', 'sans-serif';;
+    font-size: 18px;
+}
+
+.container{
+    width:960px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4{
+    display: block;
+/*    outline: 1px green solid;*/
+    font-weight: lighter;
+    line-height: 130%;
+}
+
+.topBar{
+    height: 40px;
+    background-color: #666;
+    position: relative;
+/*    overflow: auto;*/
+}
+
+.topBar p{
+    position: absolute;
+    right:10px;
+    top:10px;
+    color: #fff;
+
+}
+
+.topBar a{
+    color: #FF9900;
+    text-decoration: none;
+}
+
+#searchBox{
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+#searchBox>input{
+/*    outline:1px orange solid;*/
+    display: inline;
+}
+
+#searchBox>input[type="text"]{
+    height: 10px;
+}
+
+#searchBox>input[type="button"]{
+    height: 12px;
+}
+
+.header{
+    height: 210px;
+    background-image: url(../images/forumheader.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+
+.hideText{
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 100%;
+}
+
+.topicsBar{
+    font-size:26px;
+    background-color: #fff;
+    color: #0099ff;
+    height: 32px;
+    line-height:27px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    margin-bottom: 5px;
+}
+
+.topicsBar h2{
+    width: 70%;
+    float: left;
+}
+
+.topicsBar h3{
+    width:15%;
+    float: left;
+    text-align: center;
+}
+
+
+
+.topicBox{
+    border-bottom: 1px solid #a8a8a8;
+    margin-bottom: 5px;
+    margin-top:7px;
+}
+
+.topicBox:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.topicIcon{
+    float: left;
+    width: 10%;
+/*    outline: 1px blue solid;*/
+    margin-bottom: 5px;
+}
+
+.topicTitles{
+    float: left;
+    width: 13%;
+    margin-left: 10px;
+/*    outline: 1px green solid;*/
+}
+
+.topicTitles h3 {
+    font-size: 25px;
+    color: #FF9900;
+}
+
+.topicTitles a{
+    display:block;
+    text-decoration: none;
+}
+
+.topicTitles a:visited{
+     color: #FF9900;
+     text-decoration: none;
+}
+
+.topicTitles h4{
+    font-size: 22px;
+    margin-top: 5px;
+    color: #666;
+}
+
+.topicDescription{
+    float:left;
+    width: 46%;
+
+    margin-bottom: 5px;
+/*    outline: 1px orange solid;*/
+    font-weight: lighter;
+
+}
+
+.threadCounter{
+    float:left;
+    width: 14%;
+/*    outline: 1px cyan solid;*/
+    text-align: center;
+    font-size: 22px;
+    margin-top: 25px;
+
+}
+
+.postCounter{
+    float:left;
+    width: 14%;
+/*    outline: 1px purple solid;*/
+    text-align: center;
+    font-size: 22px;
+    margin-top: 25px;
+
+}
+
+.footer{
+    clear:both;
+    margin-top: 60px;
+}
+
+.footer a{
+    margin-right: 10px;
+
+}
+
+.footer p{
+    font-size: 16px;
+    float: right;
+    margin-top: 15px;
+    color: #0099ff;
+}
+
+.button{
+    display: block;
+    width: 14%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: #ff9900;
+    color: #fff;
+    text-align: center;
+    line-height: 130%;
+}
+
+/*-------------------THREADS STYLES*/
+
+.threadsBar{
+    font-size:24px;
+    background-color: #fff;
+    color: #0099ff;
+    height: 32px;
+    line-height:27px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    margin-bottom: 5px;
+}
+
+.threadsBar:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.threadsBar h2, p{
+    float: left;
+    margin-right: 5px;
+/*    outline: 1px green solid;*/
+}
+
+.threadsBar a{
+    text-decoration: none;
+}
+
+.threadsBar a:visited{
+    color: #ff9900;
+}
+
+.threadsBar h3{
+    font-size: 20px;
+    float: left;
+    text-align: center;
+/*    outline: 1px orange solid;*/
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width:15%;
+}
+
+.threadsBar h2:nth-child(3){
+    width:40%;
+
+}
+
+.threadBox{
+    border-bottom: 1px solid #a8a8a8;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.threadBox:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.threadStatusIcon{
+/*    outline: 1px blue solid;*/
+    float:left;
+    width: 5%;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.threadTitle h3 a{
+/*    outline: 1px green solid;*/
+    float: left;
+    width: 48%;
+    font-size: 22px;
+    text-decoration: none;
+    color: #000;
+    margin-right: 3px;
+    margin-top: 5px;
+}
+
+.threadTitle a:hover{
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.threadTitle a:visited{
+    text-decoration: none;
+}
+
+.threadReplies{
+    float:left;
+    width:15%;
+/*    outline: 1px blue solid;*/
+    margin-top: 5px;
+}
+
+.threadReplies p{
+    text-align: center;
+    width:100%;
+    font-size: 22px;
+}
+
+.threadCreatedBy{
+/*    outline: 1px orange solid;*/
+    float: left;
+    width:15%;
+
+}
+
+.threadCreatedBy p{
+    width:100%;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+.threadCreatedBy a{
+    text-decoration: none;
+    color: #ff9900;
+    width:100%;
+}
+
+.threadLastPost{
+/*    outline: 1px red solid;*/
+    float: left;
+    width: 15%;
+}
+
+.threadLastPost p{
+    width:100%;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+
+.threadLastPost a{
+    text-decoration: none;
+    color: #ff9900;
+    width:100%;
+}
+
+.small{
+    font-size: 16px;
+    color: #666;
+    font-weight: lighter;
+    text-align: center;
+    width:100%;
+}
+
+/*-------------------POSTS STYLES*/
+.postsBar{
+    font-size:24px;
+    background-color: #fff;
+    color: #0099ff;
+    height: 32px;
+    line-height:27px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    margin-bottom: 5px;
+}
+
+.postsBar:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.postsBar h2, p{
+    float: left;
+    margin-right: 5px;
+/*    outline: 1px green solid;*/
+}
+
+.postsBar a{
+    text-decoration: none;
+}
+
+.postsBar a:visited{
+    color: #ff9900;
+}
+
+.postBox{
+/*    outline: 1px blue solid;*/
+    border-bottom: 1px solid #a8a8a8;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+
+.postBox:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.postAuthor{
+/*    outline: 1px orange solid;*/
+    width:15%;
+    float:left;
+    margin-bottom: 20px;
+}
+
+.postAuthor:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.avatar{
+/*   outline: 1px blue solid;*/
+    margin: 5px 10px;
+    height:100px;
+    width:100px;
+}
+
+.postAuthor h3 a{
+    color: #ff9900;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.postAuthor a:visited{
+    text-decoration: none;
+    color: #ff9900;
+}
+
+.postAuthor h4{
+    margin-left: 10px;
+}
+
+.postControls{
+/*    outline: 1px cyan solid;*/
+    float: left;
+    width:85%;
+
+}
+
+.postControls:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.postControls p{
+    float: left;
+    font-weight: lighter;
+    color: #666;
+    width:70%;
+/*    outline: 1px blue solid;*/
+    margin-top: 5px;
+}
+
+.postControls a{
+    float:left;
+    margin-left: 5px;
+/*    outline:1px black solid;*/
+    margin-top: 5px;
+}
+
+.postText{
+    width:85%;
+/*    outline: 1px green solid;*/
+    float:left;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    line-height: 120%;
+}
+
+.postControls:after{
+    content:"";
+    clear:both;
+    display:block;
+
+}
+
+.postReply{
+    margin-top: 15px;
+}
+
+/*---------------------USER PROFILE STYLES*/
+
+.profileBar{
+    font-size:26px;
+    background-color: #fff;
+    color: #0099ff;
+    height: 32px;
+    line-height:27px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    margin-bottom: 5px;
+}
+
+.profileBar:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.profileBar h2{
+    float: left;
+    margin-right: 10px;
+/*    outline: 1px green solid;*/
+}
+
+.profileBox{
+/*    outline: 1px blue solid;*/
+    margin-top: 15px;
+    font-size: 26px;
+    font-weight: lighter;
+
+}
+
+.profileBox:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.profileAvatarBox{
+/*    outline: 1px cyan solid;*/
+    float: left;
+    width: 15%;
+}
+
+.profileAvatar:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.profileText{
+/*   outline: 1px orange solid;*/
+   float:left;
+   margin-left: 15px;
+   width: 80%;
+   line-height:120%;
+}
+
+.profileText:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.profileText ul li{
+    list-style-type: none;
+}
+
+.profileText a{
+    margin-top: 15px;
+
+}
+
+.profileText span{
+    color: #0099ff;
+}
+
+/*-----------register styles-----*/
+.registerBox{
+    width: 960px;
+/*    outline:1px black solid;*/
+}
+
+
+/*------------------FORM STYLES-------*/
+
+
+    form {
+        margin-bottom: 20px;
+        margin-left: 10%; }
+    fieldset {
+        margin-bottom: 20px; }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea,
+    select {
+        border: 1px solid #ccc;
+        padding: 6px 4px;
+        outline: none;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #777;
+        margin: 0;
+        width: 210px;
+        max-width: 100%;
+        display: block;
+     /*   margin-bottom: 20px;*/
+        background: #fff;
+/*        outline: 1px blue solid;*/ }
+    select {
+        padding: 0; }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+        border: 1px solid #aaa;
+        color: #444;
+        -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+        -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+        box-shadow:  0 0 3px rgba(0,0,0,.2); }
+    textarea {
+        min-height: 60px; }
+    label,
+    legend {
+        display: block;
+        font-size: 16px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+/*        outline:1px solid orange;*/
+             }
+    select {
+        width: 220px; }
+    input[type="checkbox"] {
+        display: inline; }
+    label span,
+    legend span {
+        font-weight: normal;
+        font-size: 13px;
+        color: #444; }
+    input[type="submit"]{
+        display:block;
+        background-color: #ff9900;
+        height: 30px;
+        width: 80px;
+        font-size: 14px;
+        color: #fff;
+        margin-top: 30px;
+    }
+
+
+
+
+
+
