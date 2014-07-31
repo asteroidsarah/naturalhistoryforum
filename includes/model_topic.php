@@ -29,7 +29,7 @@ class Topic{
 		//2.query database
 		$sSQL = "SELECT topicID, topicPhotopath, topicTitle, topicSubtitle, topicDescription
 				FROM tbtopic
-				WHERE topicID=".$iID;
+				WHERE topicID=".$oConnection->escape_value($iID);
 
 		$oResult = $oConnection->query($sSQL);
 
@@ -46,6 +46,8 @@ class Topic{
 			$sSQL = "SELECT threadID
 					FROM tbthread
 					WHERE topicID=".$iID;
+
+		
 
 			$oResult = $oConnection->query($sSQL);
 
@@ -72,7 +74,7 @@ class Topic{
 				return $this->iTopicID;
 				break;
 			case 'topicPhotopath':
-				return $this->iTopicPhotopath;
+				return $this->sTopicPhotopath;
 				break;
 			case 'topicTitle':
 				return $this->sTopicTitle;

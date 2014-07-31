@@ -6,6 +6,6 @@
 			<p>Forum by Webscience 2014</p>
 		</div>
 	</div>
-	
+	<script type="text/javascript" src="assets/javascript.js"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@ class Thread{
 		//2.query database
 		$sSQL = "SELECT threadID, userID, topicID, threadTitle, threadDate
 				FROM tbthread
-				WHERE threadID=".$iID;
+				WHERE threadID=".$oConnection->escape_value($iID);
 
 		$oResult = $oConnection->query($sSQL);
 
@@ -43,7 +43,7 @@ class Thread{
 			//use a while loop to load all the posts in a thread
 			$sSQL = "SELECT postID
 					FROM tbpost
-					WHERE threadID=".$iID;
+					WHERE threadID=".$oConnection->escape_value($iID)." AND postActive = 1 ORDER BY postDate";
 
 			$oResult = $oConnection->query($sSQL);
 
@@ -63,6 +63,29 @@ class Thread{
 		$oConnection->close_connection();
 	}
 
+	//save function to insert thread info into database
+	public function save(){
+		//1. Make connection
+		$oConnection = new Connection();
+		//2. Query database
+		$sSQL = "INSERT INTO tbthread (userID, topicID, threadTitle)  
+				VALUES ('".$oConnection->escape_value($this->iUserID)."',
+						'".$oConnection->escape_value($this->iTopicID)."',
+						'".$oConnection->escape_value($this->sThreadTitle)."')";
+
+		$bResult = $oConnection->query($sSQL);
+
+		if($bResult == true){
+			//retrieve the last autoincremented ID (to make php reflect db, since we removed primary key ID from query)
+			//$this->iPostID = $oConnection->get_insert_id();
+			//here, we modify that previous way of getting the last autoincremented id back out from the database by further using it to load the whole object again from the database, so that last generated values such as timestamp will be reflected back accurately.
+			$this->load($oConnection->get_insert_id());
+		} else {
+			die($sSQL . "fails - check model_thread.php");
+		}
+		//4. Close connection
+		$oConnection->close_connection();
+	}
 
 	public function __get($var){
 		switch ($var) {
@@ -89,22 +112,53 @@ class Thread{
 		}
 	}
 
+	public function __set($var, $value){
+		switch ($var) {
+			case 'userID':
+				$this->iUserID = $value;
+				break;
+			case 'topicID':
+				$this->iTopicID = $value;
+				break;
+			case 'threadTitle':
+				$this->sThreadTitle = $value;
+				break;
+			default:
+				die($var . "can't be set in model_thread");
+		}
+	}
+
 }
 
 //-------------------------------TESTING
 
-$oThread = new Thread();
-$oThread->load(1);
+// $oThread = new Thread();
+// $oThread->load(1);
 
 
-echo "<pre>";
-//return out the list of products for the loaded product type
-print_r($oThread->threadPosts);
+// echo "<pre>";
+// //return out the list of products for the loaded product type
+// print_r($oThread->threadPosts);
 
-//test out the getter
-echo $oThread->threadTitle;
-echo $oThread->userID;
-echo "</pre>";
+// //test out the getter
+// echo $oThread->threadTitle;
+// echo $oThread->userID;
+// echo "</pre>";
+
+//-----------------------TESTING SAVE FUNCTION (INSERT) AND SETTER
+
+// $oThread = new Thread(); //create new thread
+
+// $oThread->userID = 1;
+// $oThread->topicID = 1; //use setter to set values
+// $oThread->threadTitle = "testing the save function in model_thread.php";
+
+
+// $oThread->save(); //save all this new stuff set by the setter to the db :)
+
+// echo "<pre>";
+// print_r($oThread);
+// echo "</pre>";
 
 
 

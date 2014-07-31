@@ -1,9 +1,9 @@
 <?php
 //define constants
-define("DB_SERVER", "127.0.0.1");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
-define("DB_NAME", "forum");
+define("DB_SERVER", "localhost");
+define("DB_USER", "sarahjoh_admin");
+define("DB_PASSWORD", "AdminPa55");
+define("DB_NAME", "sarahjoh_forum");
 
 class Connection {
 
